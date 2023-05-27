@@ -1,5 +1,5 @@
 -- It will copy the data from one table to another table based on condition
-
+drop table if exists departments_dup;
 SELECT 
     *
 FROM
@@ -15,7 +15,7 @@ INSERT INTO departments_dup(
     dept_name
 )
 SELECT 
-    dept_no, dept_name
+    *
 FROM
     departments;
 
