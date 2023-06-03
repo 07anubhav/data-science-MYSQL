@@ -19,8 +19,9 @@ END$$
 
 DELIMITER ;
 
-call employees.emp_avg_salary_out(11300,@p_avg_salary);
-select @p_avg_salary;
+SET @v_avg_salary = 0;
+CALL employees.emp_avg_salary_out(11300,@v_avg_salary);
+select @v_avg_salary;
 
 /*
 Create a procedure called ‘emp_info’ that uses as parameters the first and the last name of an individual, and returns their employee number.
